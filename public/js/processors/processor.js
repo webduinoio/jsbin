@@ -499,7 +499,7 @@ var processors = jsbin.processors = (function () {
       },
       handler: function babelhandle(source, resolve, reject) {
         try {
-          resolve(babel.transform(source, { stage: 0 }).code);
+          resolve(Babel.transform(source, { presets: ['es2015', 'stage-3'], plugins: ['transform-strict-mode'] }).code);
         } catch (e) {
           console.error(e.message);
           reject([{
