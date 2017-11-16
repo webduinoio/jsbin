@@ -1,10 +1,10 @@
 {
-  "env": "development",
-  "timezone": "UTC",
+  "env": "production",
+  "timezone": "UTC+8",
   "url": {
-    "host": "localhost:3000",
+    "host": "bin.webduino.org",
     "prefix": "/",
-    "ssl": false,
+    "ssl": true,
     "static": false,
     "runner": false
   },
@@ -24,10 +24,12 @@
       "collate": "utf8mb4_unicode_ci"
     }
   },
-  "session": {},
+  "session": {
+    "secret": "mysessionsecret"
+  },
   "analytics": {
-    "id": null,
-    "render-id": null
+    "id": "UA-65365242-1",
+    "render-id": "UA-65365242-1"
   },
   "ui": {},
   "mail": {
@@ -42,7 +44,7 @@
     }
   },
   "server": {
-    "logger": "default"
+    "logger": "none"
   },
   "security": {
     "allowAnonymousPreview": false
